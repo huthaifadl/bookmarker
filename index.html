@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row vh-100">
+        <!-- Col -->
+        <div
+          class="col-2 col-sm-3 col-xl-2 bg-orange position-relative sidebar-shadow"
+        >
+          <div class="container">
+            <nav
+              class="navbar bg-orange border-bottom border-white mb-4"
+              data-bs-theme="dark"
+            >
+              <div class="container">
+                <a
+                  class="navbar-brand fs-4 fw-bolder color-green w-100 text-center"
+                  href="#"
+                >
+                  <span class="pacifico-regular d-md-none d-inline">BM</span>
+                  <span class="pacifico-regular d-md-inline d-none">Bookmarker</span>
+                </a>
+              </div>
+            </nav>
+
+            <div class="d-flex align-items-start justify-content-center">
+              <div
+                class="nav flex-column nav-pills me-3 align-items-start w-100"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <div
+                  class="menu-item d-flex w-100 mb-2 nav-link fw-medium active"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  <i
+                    class="fa-solid fa-circle-plus my-icon align-content-center me-2"
+                  ></i>
+                  <span class="ms-3 d-none d-md-inline text-nowrap"
+                    >Add New Mark</span
+                  >
+                </div>
+                <div
+                  class="menu-item d-flex w-100 mb-2 nav-link fw-medium"
+                  id="v-pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-profile"
+                  aria-selected="false"
+                >
+                  <i
+                    class="fa-solid my-icon fa-book-bookmark align-content-center me-2"
+                  ></i>
+                  <span class="ms-3 d-none d-md-inline text-nowrap"
+                    >All Your Marks</span
+                  >
+                </div>
+                <div
+                  class="menu-item d-flex w-100 mb-2 nav-link fw-medium"
+                  id="v-pills-messages-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-messages"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-messages"
+                  aria-selected="false"
+                >
+                  <i
+                    class="fa-solid my-icon fa-book-bookmark align-content-center me-2"
+                  ></i>
+                  <span class="ms-3 d-none d-md-inline text-nowrap"
+                    >Messages</span
+                  >
+                </div>
+                <div
+                  class="menu-item d-flex w-100 mb-2 nav-link fw-medium"
+                  id="v-pills-settings-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-settings"
+                  aria-selected="false"
+                >
+                  <i
+                    class="fa-solid my-icon fa-book-bookmark align-content-center me-2"
+                  ></i>
+                  <span class="ms-3 d-none d-md-inline text-nowrap"
+                    >Settings</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Col -->
+        <div class="col-10 col-sm-9 col-xl-10 bg-bayge">
+          <div class="tab-content" id="v-pills-tabContent">
+            <!-- First Tap -->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+              tabindex="0"
+            >
+              <div class="container py-5">
+                <div class="main">
+                    <h2 class="page-title pacifico-regular h-color text-center ">Add New Bookmark</h2>
+                </div>
+                <div class="addMarkBody w-100 p-3 py-4 mt-5 bg-info">
+                    <h2 class="text-center">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites 
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                    <div class="site-name">
+                        <label for="">Site Name</label>
+                        <input type="text">
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- Second Tap -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-profile"
+              role="tabpanel"
+              aria-labelledby="v-pills-profile-tab"
+              tabindex="0"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestiae corrupti, exercitationem ullam maiores, reprehenderit
+              eius sequi architecto, fuga voluptas aliquid officia consequuntur.
+              Deleniti molestias cumque ratione, odit id itaque excepturi.
+            </div>
+            <!-- Third Tap -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-messages"
+              role="tabpanel"
+              aria-labelledby="v-pills-messages-tab"
+              tabindex="0"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestiae corrupti, exercitationem ullam maiores, reprehenderit
+              eius sequi architecto, odit id itaque excepturi.
+            </div>
+            <!-- Forth Tap -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-settings"
+              role="tabpanel"
+              aria-labelledby="v-pills-settings-tab"
+              tabindex="0"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestiae corrupti, exercitationem ullam maiores, reprehenderit
+              eius sequi architecto, fuga voluptas aliquid officia consequuntur.
+              odit id itaque excepturi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

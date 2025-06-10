@@ -1,0 +1,116 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: transparent;
+    color: #f3f3f3;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.nav-link:focus, .nav-link:hover {
+    color: #8A9E23;
+}
+
+.sidebar-shadow {
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.256); /* ظل لليمين */
+  }
+
+.nav-link {
+    color: #3FA55B;
+}
+
+.navbar-brand:focus, .navbar-brand:hover {
+    color: #3FA55B;
+}
+
+.bg-orange {
+    background-color: #FEC260;
+}
+
+.h-color {
+    color: #352E28;
+}
+
+.bg-bayge {
+    background-color: #F7ECDE;
+}
+
+.color-green {
+    color: #3FA55B;
+}
+
+.addMarkBody {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352E28;
+}
+
+.addMarkBody h2 {
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.my-icon {
+  font-size: 1rem;
+}
+
+/* .main {
+  min-height: 100vh;
+} */
+
+.main .page-title {
+    isolation: isolate;
+    position: relative;
+}
+
+.main .page-title::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+.main .page-title:hover::before {
+  height: 50%;
+}
+
+@media (max-width: 768px) {
+    .col-sm-3 {
+        flex: 0 0 auto;
+        width: 15%;
+    }
+        
+    .col-sm-9 {
+        flex: 0 0 auto;
+        width: 85%;
+    }
+
+    .menu-item {
+        justify-content: center;
+    }
+
+    .main-icon {
+        font-size: 1.6rem;
+    }
+
+    .my-icon {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+}
