@@ -36,7 +36,9 @@
                   href="#"
                 >
                   <span class="pacifico-regular d-md-none d-inline">BM</span>
-                  <span class="pacifico-regular d-md-inline d-none">Bookmarker</span>
+                  <span class="pacifico-regular d-md-inline d-none"
+                    >Bookmarker</span
+                  >
                 </a>
               </div>
             </nav>
@@ -133,18 +135,52 @@
             >
               <div class="container py-5">
                 <div class="main">
-                    <h2 class="page-title pacifico-regular h-color text-center ">Add New Bookmark</h2>
+                  <h2 class="page-title pacifico-regular h-color text-center">
+                    Add New Bookmark
+                  </h2>
                 </div>
                 <div class="addMarkBody w-100 p-3 py-4 mt-5 bg-info">
-                    <h2 class="text-center">
-                        <i class="fa-solid fa-bookmark"></i>
-                        Bookmark your favorite sites 
-                        <i class="fa-solid fa-bookmark"></i>
-                    </h2>
-                    <div class="site-name">
-                        <label for="">Site Name</label>
-                        <input type="text">
+                  <h2 class="text-center text-nowrap fw-bold fs-4">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                  </h2>
+                  <div class="mb-3">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <label for="url-name" class="form-label fw-medium"
+                      >Site Name</label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="url-name"
+                        placeholder="Bookmark Name"
+                        aria-describedby="basic-addon3 basic-addon4"
+                      />
                     </div>
+                    <div class="form-text" id="basic-addon4">
+                      Example help text goes outside the input group.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <i class="fa-solid fa-link"></i>
+                    <label for="url-link" class="form-label fw-medium"
+                      >Site URL</label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="url-link"
+                        placeholder="Website URL"
+                        aria-describedby="basic-addon3 basic-addon4"
+                      />
+                    </div>
+                    <div class="form-text" id="basic-addon4">
+                      Example help text goes outside the input group.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
