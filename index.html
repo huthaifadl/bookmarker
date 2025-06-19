@@ -41,9 +41,6 @@
             <li class="nav-item">
               <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
             </li>
-            <li class="nav-item">
-              <!-- <a class="nav-link" id="tab-set" data-bs-toggle="tap" data-bs-target="#v-pills-home" role="tab" data-bs-target="#v-pills-settings">Settings</a> -->
-            </li>
           </ul>
         </div>
       </div>
@@ -77,14 +74,14 @@
                   </h2>
                   <div class="mb-3">
                     <i class="fa-solid fa-file-signature"></i>
-                    <label for="url-name" class="form-label fw-medium"
+                    <label for="site-name" class="form-label fw-medium"
                       >Site Name</label
                     >
                     <div class="input-group">
                       <input
                         type="text"
                         class="form-control"
-                        id="url-name"
+                        id="site-name"
                         placeholder="Bookmark Name"
                         aria-describedby="basic-addon3 basic-addon4"
                       />
@@ -112,7 +109,7 @@
                     </div>
                   </div>
                   <div class="d-grid gap-2 col-6 mx-auto">
-                    <button id="submit-btn" class="btn-submit btn btn-primary" type="button">Button</button>
+                    <button onclick="addBookMark()" id="submit-btn" class="btn-submit btn text-capitalize fw-medium btn-primary" type="button">submit</button>
                   </div>
                 </div>
               </div>
@@ -128,30 +125,9 @@
                       </tr>
                     </thead>
                     <tbody id="body-table" class="text-center">
-                      <tr>
-                        <td>1</td>
-                        <td>Google</td>
-                        <td><button type="button" class="btn btn-success"><i class="fa-solid fa-eye"></i> Visit</button></td>
-                        <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Google</td>
-                        <td><button type="button" class="btn btn-success"><i class="fa-solid fa-eye"></i> Visit</button></td>
-                        <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Google</td>
-                        <td><button type="button" class="btn btn-success"><i class="fa-solid fa-eye"></i> Visit</button></td>
-                        <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Google</td>
-                        <td><button type="button" class="btn btn-success"><i class="fa-solid fa-eye"></i> Visit</button></td>
-                        <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button></td>
-                      </tr>
+                    
+                      <!-- Row Of Table Display Here -->
+
                     </tbody>
                   </table>
                 </div>
@@ -171,43 +147,10 @@
                     saved bookmarks
                   </h2>
                 </div>
-              <div class="row gap-3 d-flex justify-content-center">
-                <!-- First Card -->
-                <div class="card" style="width: 18rem;">
-                  <img src="./img/google-logo.webp" class="card-img-top" alt="google logo">
-                  <div class="card-body text-center">
-                    <h5 class="card-title text-capitalize mb-4">google</h5>
-                    <a href="#" class="btn btn-success text-capitalize"><i class="fa-solid fa-eye"></i> visit</a>
-                    <a href="#" class="btn btn-danger text-capitalize"><i class="fa-solid fa-trash"></i> delete</a>
-                  </div>
-                </div>
-                <!-- Second Card -->
-                <div class="card" style="width: 18rem;">
-                  <img src="./img/google-logo.webp" class="card-img-top" alt="google logo">
-                  <div class="card-body text-center">
-                    <h5 class="card-title text-capitalize mb-4">google</h5>
-                    <a href="#" class="btn btn-success text-capitalize"><i class="fa-solid fa-eye"></i> visit</a>
-                    <a href="#" class="btn btn-danger text-capitalize"><i class="fa-solid fa-trash"></i> delete</a>
-                  </div>
-                </div>
-                <!-- Third Card -->
-                <div class="card" style="width: 18rem;">
-                  <img src="./img/google-logo.webp" class="card-img-top" alt="google logo">
-                  <div class="card-body text-center">
-                    <h5 class="card-title text-capitalize mb-4">google</h5>
-                    <a href="#" class="btn btn-success text-capitalize"><i class="fa-solid fa-eye"></i> visit</a>
-                    <a href="#" class="btn btn-danger text-capitalize"><i class="fa-solid fa-trash"></i> delete</a>
-                  </div>
-                </div>
-                <!-- Third Card -->
-                <div class="card" style="width: 18rem;">
-                  <img src="./img/google-logo.webp" class="card-img-top" alt="google logo">
-                  <div class="card-body text-center">
-                    <h5 class="card-title text-capitalize mb-4">google</h5>
-                    <a href="#" class="btn btn-success text-capitalize"><i class="fa-solid fa-eye"></i> visit</a>
-                    <a href="#" class="btn btn-danger text-capitalize"><i class="fa-solid fa-trash"></i> delete</a>
-                  </div>
-                </div>
+              <div id="cardsData" class="row gap-3 d-flex justify-content-center">
+                
+                <!-- Display Cards Here -->
+                
               </div>
             </div>
             </div>
@@ -222,19 +165,6 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Molestiae corrupti, exercitationem ullam maiores, reprehenderit
               eius sequi architecto, odit id itaque excepturi.
-            </div>
-            <!-- Forth Tap -->
-            <div
-              class="tab-pane fade"
-              id="v-pills-settings"
-              role="tabpanel"
-              aria-labelledby="v-pills-settings-tab"
-              tabindex="0"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Molestiae corrupti, exercitationem ullam maiores, reprehenderit
-              eius sequi architecto, fuga voluptas aliquid officia consequuntur.
-              odit id itaque excepturi.
             </div>
           </div>
         </div>
