@@ -49,7 +49,7 @@ function displayBookMark() {
         tableCartona += `
         <tr>
             <td>${i + 1}</td>
-            <td>${bookMarksContainer[i].siteName}</td>
+            <td class="text-capitalize">${bookMarksContainer[i].siteName}</td>
             <td><button onclick="window.open('${bookMarksContainer[i].siteURL}', '_blank')" type="button" class="btn btn-success"><i class="fa-solid fa-eye"></i> Visit</button></td>
             <td><button onclick="deleteBookMark(${i})" type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button></td>
         </tr>
