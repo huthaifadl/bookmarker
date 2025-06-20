@@ -4,7 +4,7 @@ var bookMarksContainer;
 
 if(localStorage.getItem("bookMark") == null) {
     bookMarksContainer = [];
-} else {
+}else {
     bookMarksContainer = JSON.parse( localStorage.getItem('bookMark'));
     displayBookMark();
 }
@@ -16,9 +16,9 @@ function addBookMark() {
     }
     bookMarksContainer.push(bookMark);
     // clear
-    clearInputs();
     displayBookMark();
     localStorage.setItem('bookMark' , JSON.stringify(bookMarksContainer));
+    clearInputs();
 }
 
 function clearInputs() {
@@ -38,7 +38,7 @@ function displayBookMark() {
                 <div class="card-body text-center">
                     <h5 class="card-title text-capitalize mb-4">${bookMarksContainer[i].siteName}</h5>
                     <a href="${bookMarksContainer[i].siteURL}" target="_blank" class="btn btn-success text-capitalize"><i class="fa-solid fa-eye"></i> visit</a>
-                    <a href="#" class="btn btn-danger text-capitalize"><i class="fa-solid fa-trash"></i> delete</a>
+                    <button onclick="deleteBookMark(${i})" class="btn btn-danger text-capitalize"><i class="fa-solid fa-trash"></i> delete</button>
                 </div>
         </div>
         `;
@@ -51,10 +51,16 @@ function displayBookMark() {
             <td>${i + 1}</td>
             <td>${bookMarksContainer[i].siteName}</td>
             <td><button onclick="window.open('${bookMarksContainer[i].siteURL}', '_blank')" type="button" class="btn btn-success"><i class="fa-solid fa-eye"></i> Visit</button></td>
-            <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button></td>
+            <td><button onclick="deleteBookMark(${i})" type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button></td>
         </tr>
         `;
     }
     document.getElementById('body-table').innerHTML = tableCartona;
     document.getElementById('cardsData').innerHTML = cardCartona;
+}
+
+function deleteBookMark(deletedIndex) {
+    bookMarksContainer.splice(deletedIndex, 1);
+    displayBookMark();
+    localStorage.setItem('bookMark' , JSON.stringify(bookMarksContainer));
 }
