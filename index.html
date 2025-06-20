@@ -20,23 +20,50 @@
   </head>
   <body>
     <!-- header -->
-     <header class="navbar navbar-expand-lg bg-orange fixed-top sidebar-shadow">
+    <header class="navbar navbar-expand-lg bg-orange fixed-top sidebar-shadow">
       <div class="container">
         <a class="navbar-brand pacifico-regular h-color" href="#">
           Bookmarker
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#v-pills-tab">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#v-pills-tab"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="v-pills-tab" role="tablist">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true" href="#v-pills-home"><i class="fa-solid fa-circle-plus my-icon align-content-center me-1"></i> Add New Mark</a>
+              <a
+                class="nav-link active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+                href="#v-pills-home"
+                ><i
+                  class="fa-solid fa-circle-plus my-icon align-content-center me-1"
+                ></i>
+                Add New Mark</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false" href="#v-pills-profile"><i
-                    class="fa-solid my-icon fa-book-bookmark align-content-center me-1"
-                  ></i>All Your Marks</a>
+              <a
+                class="nav-link"
+                id="v-pills-profile-tab"
+                data-bs-toggle="pill"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+                href="#v-pills-profile"
+                ><i
+                  class="fa-solid my-icon fa-book-bookmark align-content-center me-1"
+                ></i
+                >All Your Marks</a
+              >
             </li>
           </ul>
         </div>
@@ -63,12 +90,15 @@
                     Add New Bookmark
                   </h2>
                 </div>
-                <div class="addMarkBody d-flex flex-column gap-4 w-100 p-3 py-4 mt-5">
+                <div
+                  class="addMarkBody d-flex flex-column gap-4 w-100 p-3 py-4 mt-5"
+                >
                   <h2 class="text-center text-nowrap fw-bold fs-4">
                     <i class="fa-solid fa-bookmark"></i>
                     Bookmark your favorite sites
                     <i class="fa-solid fa-bookmark"></i>
                   </h2>
+                  <!-- Site Name input -->
                   <div class="mb-3">
                     <i class="fa-solid fa-file-signature"></i>
                     <label for="site-name" class="form-label fw-medium"
@@ -80,13 +110,19 @@
                         class="form-control"
                         id="site-name"
                         placeholder="Bookmark Name"
-                        aria-describedby="basic-addon3 basic-addon4"
+                        aria-describedby="siteNameError"
                       />
                     </div>
-                    <div class="form-text" id="basic-addon4">
-                      Name Of The Website, Like "Google", "Youtube" or "Facebook", etc.
+                    <div
+                      id="siteNameError"
+                      class="form-text text-danger d-none"
+                    >
+                      Please enter a valid site name (at least 3 characters)
+                      Like "Google", "Youtube" etc.
                     </div>
                   </div>
+
+                  <!-- Site URL input -->
                   <div class="mb-3">
                     <i class="fa-solid fa-link"></i>
                     <label for="url-link" class="form-label fw-medium"
@@ -98,15 +134,23 @@
                         class="form-control"
                         id="url-link"
                         placeholder="Website URL"
-                        aria-describedby="basic-addon3 basic-addon4"
+                        aria-describedby="urlError"
                       />
                     </div>
-                    <div class="form-text" id="basic-addon4">
-                      For Example: "https://www.google.com/" OR "www.google.com".
+                    <div id="urlError" class="form-text text-danger d-none">
+                      Please enter a valid URL.
                     </div>
                   </div>
+
                   <div class="d-grid gap-2 col-6 mx-auto">
-                    <button onclick="addBookMark()" id="submit-btn" class="btn-submit btn text-capitalize fw-medium btn-primary" type="button">submit</button>
+                    <button
+                      onclick="addBookMark()"
+                      id="submit-btn"
+                      class="btn-submit btn text-capitalize fw-medium btn-primary"
+                      type="button"
+                    >
+                      submit
+                    </button>
                   </div>
                 </div>
               </div>
@@ -122,9 +166,8 @@
                       </tr>
                     </thead>
                     <tbody id="body-table" class="text-center">
-                    <td class="text-capitalize"></td>
+                      <td class="text-capitalize"></td>
                       <!-- Row Of Table Display Here -->
-
                     </tbody>
                   </table>
                 </div>
@@ -138,18 +181,21 @@
               aria-labelledby="v-pills-profile-tab"
               tabindex="0"
             >
-            <div class="container">
-              <div class="main py-5">
-                  <h2 class="page-title pacifico-regular h-color text-center text-capitalize">
+              <div class="container">
+                <div class="main py-5">
+                  <h2
+                    class="page-title pacifico-regular h-color text-center text-capitalize"
+                  >
                     saved bookmarks
                   </h2>
                 </div>
-              <div id="cardsData" class="row gap-3 d-flex justify-content-center">
-                
-                <!-- Display Cards Here -->
-                
+                <div
+                  id="cardsData"
+                  class="row gap-3 d-flex justify-content-center"
+                >
+                  <!-- Display Cards Here -->
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -159,6 +205,6 @@
     <!-- JS Bootstrap -->
     <script src="./js/bootstrap.bundle.min.js"></script>
     <!-- Main JS -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script2.js"></script>
   </body>
 </html>
